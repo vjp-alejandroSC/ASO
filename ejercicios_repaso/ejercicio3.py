@@ -5,11 +5,11 @@ def eliminar_alumno(nombre):
         encontrado = False
 
         with open ("ejercicios_repaso/alumnos.txt", "w") as archivo:
-            for linea in lineas:
-                if nombre not in linea:
-                    archivo.write(linea)
+            for linea in lineas: # Recorre cada línea del fichero buscando el nombre
+                if nombre not in linea: 
+                    archivo.write(linea) # Si el nombre no se encuentra, escribe la línea completa
                 else:
-                    encontrado = True
+                    encontrado = True # Si lo encuentra, borrará la línea completa
             if encontrado:
                 print(f"El alumno {nombre} ha sido borrado.")
             else:
